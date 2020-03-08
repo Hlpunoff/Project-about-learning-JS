@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=cyrillic-ext');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    height: 1800px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+    -webkit-box-shadow: 0px 9px 5px -2px rgba(94, 94, 94, 0.66);
+    -moz-box-shadow: 0px 9px 5px -2px rgba(94, 94, 94, 0.66);
+    box-shadow: 0px 9px 5px -2px rgba(94, 94, 94, 0.66);
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+.main__logo {
+    font-size: 25px;
+}
+
+.header__nav {
+    margin-right: 100px;
+}
+
+.nav__links {
+    position: relative;
+    margin-right: 18px;
+    text-decoration: none;
+    color: #3d3d3d;
+    font-weight: 500;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.nav__links:last-child {
+    margin-right: 0;
+}
+
+.nav__links:after {
+    display: block;
+    position: absolute;
+    left: 0;
+    /*изменить на right:0;, чтобы изменить направление подчёркивания */
+    width: 0;
+    /*задаём длинну линии до наведения курсора*/
+    height: 2px;
+    /*задаём ширину линии*/
+    background-color: #3d3d3d;
+    /*задаём цвет линии*/
+    content: "";
+    transition: width 0.3s ease-out;
+    /*задаём время анимации*/
+}
+
+.nav__links:hover:after,
+.nav__links:focus:after {
+    width: 100%;
+    /*устанавливаем значение 100% чтобы ссылка подчёркивалась полностью*/
+}
+
+.menu__wrap {
+    margin-right: 25px;
+}
+
+.fa-bars {
+    color: #3d3d3d;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.first__section {
+    height: 90vh;
+    background: url(/IMG/main_bg.png) no-repeat center center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-color: #3b3b3b;
+    text-align: center;
+    color: #fff;
+}
+
+.first__section_desc {
+    padding-top: 30vh;
+    display: inline-block;
+    max-width: 500px;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.first__section_button {
+    margin-top: 35px;
+    padding: 20px 20px;
+    border: none;
+    outline: none;
+    background-color: #ffc107;
+    color: #3d3d3d;
+    font-weight: 500;
+    font-size: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 600ms ease;
+    text-align: center;
+}
+
+.first__section_button:hover {
+    background-color: #dba605;
+}
+
+.fa-long-arrow-alt-right {
+    color: #3d3d3d;
+    margin-left: 5px;
+    transition: transform 600ms ease;
+}
+
+.first__section_button:hover .fa-long-arrow-alt-right {
+    margin-left: 15px;
+    transition: 1s;
+}
